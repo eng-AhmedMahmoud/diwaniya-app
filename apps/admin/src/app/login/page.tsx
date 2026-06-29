@@ -1,0 +1,43 @@
+import { LoginForm } from "./login-form";
+import { t as serverT } from "@/lib/i18n";
+import { safeNext } from "@/lib/safe-next";
+
+export const metadata = { title: "Admin · Sign in · Diwaniya" };
+export const dynamic = "force-dynamic";
+
+export default async function AdminLoginPage({
+  searchParams,
+}: { searchParams: Promise<{ next?: string; error?: string }> }) {
+  const { next, error } = await searchParams;
+  const t = await serverT();
+  const showDemoCreds = process.env.SHOW_DEMO_CREDS === "1";
+
+  return (
+    <div className="min-h-screen grid place-items-center bg-bg px-4">
+      <div className="w-full max-w-sm">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2">
+            <span className="h-8 w-8 rounded-lg brand-gradient grid place-items-center text-white font-black">د</span>
+            <span className="font-black text-lg">{t.brand.name}</span>
+          </div>
+          <p className="text-xs uppercase tracking-widest text-muted mt-2">{t.brand.sub}</p>
+        </div>
+        <div className="card p-6">
+          <h1 className="text-xl font-black">{t.login.title}</h1>
+          <p className="text-sm text-muted mt-1">{t.login.sub}</p>
+          {error === "not_admin" && (
+            <p className="mt-3 text-xs text-red-300 bg-red-500/10 border border-red-500/30 p-2.5 rounded-lg">
+              {t.login.notAdmin}
+            </p>
+          )}
+          <LoginForm next={safeNext(next)} labels={{ email: t.login.email, password: t.login.password, submit: t.login.submit }} />
+        </div>
+        {showDemoCreds && (
+          <p className="text-xs text-muted text-center mt-4">
+            Demo (dev only): <code>admin@diwaniya.app</code> · <code>Admin1234!</code>
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
