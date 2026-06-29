@@ -4,6 +4,7 @@ import { UserMenu } from "./user-menu";
 import { ThemeToggle } from "./theme-toggle";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
+import { BrandMark } from "./brand-mark";
 import { t } from "@/lib/i18n";
 
 /**
@@ -31,7 +32,7 @@ export async function Header() {
           </div>
 
           <Link href="/" className="flex items-center gap-2.5 justify-self-center group">
-            <span className="h-10 w-10 rounded-2xl brand-gradient brand-glow grid place-items-center text-white font-black text-xl group-hover:scale-105 transition-transform">د</span>
+            <span className="h-10 w-10 rounded-2xl brand-gradient brand-glow grid place-items-center text-white p-1.5 group-hover:scale-105 transition-transform"><BrandMark className="h-full w-full" title="Diwaniya" /></span>
             <span className="font-display text-2xl text-fg tracking-tight">{i.brand.name}</span>
           </Link>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandMark } from "./brand-mark";
 import { t } from "@/lib/i18n";
 
 export async function Footer() {
@@ -8,7 +9,7 @@ export async function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-2 md:grid-cols-5 gap-8 text-sm">
         <div className="col-span-2">
           <div className="flex items-center gap-2 mb-3">
-            <span className="h-8 w-8 rounded-lg brand-gradient grid place-items-center font-black">د</span>
+            <span className="h-8 w-8 rounded-lg brand-gradient grid place-items-center p-1"><BrandMark className="h-full w-full" title="Diwaniya" /></span>
             <span className="font-black text-lg">{i.brand.name}</span>
           </div>
           <p className="text-white/70 max-w-xs">
