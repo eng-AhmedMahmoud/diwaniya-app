@@ -38,6 +38,12 @@
   --font-display: "Cormorant Garamond", "Cormorant", "Playfair Display", Georgia, serif;
 }
 
+/* Admin font scale — bump base so dense KPI labels + table cells stay
+   readable. AR gets a touch more headroom (Arabic glyph aperture skews
+   smaller at the same px size). */
+html { font-size: 17px; }
+html[lang="ar"] { font-size: 18px; }
+
 html, body {
   background: var(--color-bg);
   color: var(--color-fg);
