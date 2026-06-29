@@ -82,6 +82,27 @@ export const messages = {
       empty: "No creators found — try adjusting your filters.",
       startApi: "No matches. Start API + seed DB, or try different filters.",
     },
+    filters: {
+      labels: {
+        platform: "Platform",
+        category: "Category",
+        followers: "Followers",
+        city: "City",
+        price: "Price",
+        gender: "Gender",
+        age: "Age",
+      },
+      options: {
+        platform: ["Instagram","Snapchat","TikTok","YouTube","UGC"],
+        category: ["Fashion","Beauty","Travel","Fitness","Food","Lifestyle","Tech","Gaming","Music","Family","Comedy","Pets"],
+        followers: ["1k–10k","10k–100k","100k–1M","1M+"],
+        city: ["Kuwait City","Hawalli","Salmiya","Jahra","Ahmadi","Farwaniya","Mubarak Al-Kabeer","Fahaheel","Sabah Al-Salem"],
+        price: ["Under KWD 50","KWD 50–200","KWD 200–1,000","KWD 1,000+"],
+        gender: ["Female","Male"],
+        age: ["18–24","25–34","35–44","45+"],
+      },
+      clearAll: "Clear all",
+    },
     profile: {
       shareLabel: "Share", saveLabel: "Save",
       followers: "followers", aboutPrefix: "About", portfolio: "Portfolio",
@@ -436,7 +457,7 @@ export const messages = {
     locale: { en: "EN", ar: "AR", switchTo: "العربية" },
   },
   ar: {
-    brand: { name: "ديوانية", tagline: "تسويق المؤثرين في المملكة، أسهل من أي وقت." },
+    brand: { name: "ديوانية", tagline: "تسويق المؤثرين في الكويت، أسهل من أي وقت." },
     common: {
       search: "بحث", filter: "تصفية", clear: "مسح", clearAll: "مسح الكل",
       save: "حفظ", saved: "محفوظ", share: "مشاركة", edit: "تعديل", delete: "حذف",
@@ -458,7 +479,7 @@ export const messages = {
     },
     home: {
       badge: "صنع في الكويت · أكثر من 910 ألف مؤثر موثوق",
-      headline: "تسويق المؤثرين في المملكة،",
+      headline: "تسويق المؤثرين في الكويت،",
       headlineAccent: "أسهل من أي وقت.",
       sub: "وظّف أفضل المؤثرين الكويتيين على إنستغرام، سناب شات، تيك توك، يوتيوب ومحتوى UGC. تصفح المواهب الكويتية الموثوقة، وادفع بأمان بالدينار الكويتي عبر كي نت، واطلق محتوى يحقق نتائج في مدينة الكويت وحولي والسالمية وغيرها.",
       searchPlaceholder: "ابحث عن مؤثر أو تخصص أو مدينة",
@@ -503,6 +524,27 @@ export const messages = {
       empty: "لا يوجد مؤثرون مطابقون — جرّب تعديل التصفية.",
       startApi: "لا توجد نتائج. شغّل خادم الـ API وعبّئ البيانات، أو غيّر معايير التصفية.",
     },
+    filters: {
+      labels: {
+        platform: "المنصة",
+        category: "التخصص",
+        followers: "المتابعون",
+        city: "المنطقة",
+        price: "السعر",
+        gender: "الجنس",
+        age: "العمر",
+      },
+      options: {
+        platform: ["إنستغرام","سناب شات","تيك توك","يوتيوب","UGC"],
+        category: ["أزياء","جمال","سفر","لياقة","مطاعم","أسلوب حياة","تقنية","ألعاب","موسيقى","عائلة","كوميديا","حيوانات"],
+        followers: ["1k–10k","10k–100k","100k–1M","1M+"],
+        city: ["مدينة الكويت","حولي","السالمية","الجهراء","الأحمدي","الفروانية","مبارك الكبير","الفحيحيل","صباح السالم"],
+        price: ["أقل من 50 د.ك","50–200 د.ك","200–1,000 د.ك","1,000+ د.ك"],
+        gender: ["أنثى","ذكر"],
+        age: ["18–24","25–34","35–44","45+"],
+      },
+      clearAll: "مسح الكل",
+    },
     profile: {
       shareLabel: "مشاركة", saveLabel: "حفظ",
       followers: "متابع", aboutPrefix: "عن", portfolio: "الأعمال",
@@ -546,7 +588,7 @@ export const messages = {
       ],
     },
     footer: {
-      blurb: "وظّف مؤثرين موثوقين في المملكة على إنستغرام وتيك توك وسناب شات ويوتيوب وUGC. ادفع بأمان بالريال.",
+      blurb: "وظّف مؤثرين كويتيين موثوقين على إنستغرام وسناب شات وتيك توك ويوتيوب وUGC. ادفع بأمان بالدينار الكويتي عبر كي نت.",
       brands: "العلامات التجارية", creators: "المبدعون", company: "الشركة",
       findCreators: "ابحث عن مؤثر", postCampaign: "أنشر حملة", pricing: "الأسعار", dashboard: "لوحة التحكم",
       joinCreator: "انضم كمؤثر", earnings: "الأرباح", inbox: "الرسائل",
@@ -790,8 +832,8 @@ export const messages = {
     },
     about: {
       title: "من نحن",
-      p1: "ديوانية هو سوق التسويق بالمؤثرين الحديث، مبني خصيصاً للمملكة العربية السعودية. تتعاقد العلامات مع مؤثرين سعوديين موثوقين على إنستغرام، تيك توك، سناب شات، يوتيوب، ومحتوى UGC — مع ضمان بالريال السعودي، فوترة إلكترونية متوافقة مع زاتكا، ودعم ثنائي اللغة في كل تجربة المنصة.",
-      p2: "هدفنا تسريع تسويق المحتوى بالعربية أولاً: اكتشف المؤثرين بالمدينة والتخصص، أرسل البريف خلال دقائق، ادفع بأمان، وأطلق محتوى يحقق تحويلات في كل أنحاء المملكة.",
+      p1: "ديوانية هو سوق التسويق بالمؤثرين الحديث، مبني خصيصاً للكويت. تتعاقد العلامات مع مؤثرين كويتيين موثوقين على إنستغرام، سناب شات، تيك توك، يوتيوب، ومحتوى UGC — مع ضمان بالدينار الكويتي عبر كي نت، فوترة ثنائية اللغة متوافقة مع وزارة الإعلام، وفهم ثقافي عميق من رمضان إلى هلا فبراير.",
+      p2: "هدفنا تسريع تسويق المحتوى بالعربية الخليجية أولاً: اكتشف المؤثرين بالمنطقة والتخصص، أرسل البريف خلال دقائق، ادفع بأمان، وأطلق محتوى يحقق تحويلات في كل أنحاء الكويت.",
     },
     contact: {
       title: "تواصل معنا",
